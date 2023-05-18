@@ -8,7 +8,7 @@
 
 body{
   background: #111222;
-  display: inline-block;
+  
 }
 
 header{
@@ -20,7 +20,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 200px;
+  
   transition: 0.5s ease;
 }
 
@@ -62,7 +62,7 @@ header .navigation .navigation-items a:hover:before{
 
 section{
   position: relative;
-  padding: 100px 200px;
+  padding: 50px 50px;
   display: flex;
   color: #fff;
 }
@@ -104,21 +104,15 @@ section{
   object-fit: cover;
   
 }
-.content1{
-  position: relative;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.home .content1{
+
+.home .content{
   z-index: 888;
   color: #fff;
   width: 70%;
   margin-top: 50px;
 }
 
-.home .content1 a {
+.home .content a {
   font-size: 3em;
   font-weight: 900;
   line-height: 75px;
@@ -132,60 +126,4 @@ section{
   font-weight: 600;
 }
 
-.container{
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 40px 0px;
-
-}
-
-.container .box{
-  position: relative;
-  width: 320px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px 30px;
-  transition: 0.5s;
-}
-
-.container .box::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50px;
-  width: 50px;
-  height: 100%;
-  background: #fff;
-  border-radius: 8px;
-  transform: skewX(15deg);
-  transition: 0.5s;
-}
-
-.container .box::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50px;
-  width: 50px;
-  height: 100%;
-  background: #fff;
-  border-radius: 8px;
-  transform: skewX(15deg);
-  transition: 0.5s;
-  filter: blur(30px);
-}
-
-.container.box:hover::before,
-.container.box:hover::after{
-  transform: skewX(0deg);
-}
-
-.content{
-  display: none;
-}
 
