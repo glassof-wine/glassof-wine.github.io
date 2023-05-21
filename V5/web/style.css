@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+   background: #111222;
+}
+
+/* Header styles */
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .brand {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header nav ul.navigation {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul.navigation li {
+  margin-left: 20px;
+}
+
+header nav ul.navigation li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Home section styles */
+.home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home .content a {
+  font-size: 3em;
+  font-weight: 900;
+  line-height: 75px;
+  margin-bottom: 40px;
+  color: #fff;
+  text-decoration: none;
+} 
+
+.about h2{
+  font-size: 3em;
+  font-weight: 600;
+}
+.home .content {
+  text-align: center;
+  z-index: 1;
+}
+
+.home h1 {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.home .btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ff5e5e;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.home .btn:hover {
+  background-color: #e63939;
+}
+
+/* Cards section styles */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 315px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #eee;
+}
+
+/* Style the footer */
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+
+/* Card hover effect */
+.card:hover video {
+  opacity: 0.8;
+}
+
+.card:hover .card-content {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card:hover .card-content h3 {
+  color: #eee;
+}
+
+.card:hover .card-content p {
+  color: #ccc;
+}
