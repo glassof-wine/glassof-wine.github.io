@@ -1,0 +1,124 @@
+@layer config, resets, custom;
+@layer custom {
+  body {
+    position: relative;
+    padding-inline: var(--page-padding-inline);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    z-index: 1;
+    block-size: calc(var(--magic-spacing) * 2);
+    inline-size: 100%;
+    background: linear-gradient(to bottom, transparent, var(--color-bg) 15%);
+  }
+
+  h1 {
+    --tracking: 0.25ch;
+    position: fixed;
+    inset-block-end: 0;
+    z-index: 2;
+    padding-block: var(--magic-spacing);
+    font-size: var(--pt-minion);
+    text-transform: uppercase;
+    letter-spacing: 0.25ch;
+  }
+
+  ol {
+    list-style: none;
+  }
+
+  li {
+    display: grid;
+    align-items: center;
+    position: relative;
+    inline-size: 100vi;
+    min-block-size: 100dvb;
+    -webkit-margin-start: calc(50% - 50vw);
+            margin-inline-start: calc(50% - 50vw);
+    overflow: auto;
+    scrollbar-gutter: stable;
+  }
+
+  article {
+    padding-block: var(--magic-spacing) calc(var(--magic-spacing) + 2em);
+    padding-inline: var(--page-padding-inline);
+    white-space: nowrap;
+  }
+
+  h2 + p {
+    -webkit-margin-before: calc(var(--stack) * 0.75);
+            margin-block-start: calc(var(--stack) * 0.75);
+  }
+
+  p {
+    display: grid;
+  }
+
+  p + p {
+    -webkit-margin-before: var(--stack);
+            margin-block-start: var(--stack);
+  }
+
+  .hang {
+    text-indent: -0.9ex;
+  }
+}
+@layer config {
+  :root {
+    --color-fg: #202020;
+    --color-bg: #f4f4f4;
+    --gutter: clamp(3ch, 2.5vmax, 3.75ch);
+    --stack: clamp(1.25ex, 2.5vmax, 1.75ex);
+    --paragraph-indent: calc(var(--gutter) / 1.5);
+    --line-length: 60ch;
+    --page-padding-inline: calc((100vw - min(var(--line-length), 80vw)) / 2);
+    --magic-spacing: 5vmax;
+    --font-serif: "Goudy Bookletter 1911", serif;
+    --pt-double-canon: 4.666em;
+    --pt-canon: 3.999em;
+    --pt-double-great-primer: 2.999em;
+    --pt-double-pica: 2em;
+    --pt-paragon: 1.666em;
+    --pt-english: 1.166em;
+    --pt-pica: 1em;
+    --pt-small-pica: 0.916em;
+    --pt-long-primer: 0.833em;
+    --pt-bourgeois: 0.75em;
+    --pt-minion: 0.583em;
+    font-family: var(--font-serif);
+    font-size: clamp(100%, 90% + 0.5vw, 150%);
+    line-height: 1.35;
+    color: var(--color-fg);
+    background-color: var(--color-bg);
+    color-scheme: dark light;
+    accent-color: crimson;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-fg: #f4f4f4;
+      --color-bg: #202020;
+    }
+  }
+}
+@layer resets {
+  *,
+*::before,
+*::after {
+    font-feature-settings: "kern";
+    -webkit-font-kerning: normal;
+            font-kerning: normal;
+    -moz-osx-font-smoothing: grayscale !important;
+    -webkit-font-smoothing: antialiased !important;
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
