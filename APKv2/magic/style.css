@@ -93,7 +93,7 @@ h1 {
   z-index: 99;
   color: white;
   text-align: center;
-  font-size: 3em;
+  font-size: 6em;
   mix-blend-mode: overlay;
   pointer-events: none;
 }
@@ -110,7 +110,7 @@ h1 {
   font-size: 0.8em;
 }
 .content p {
-  margin: 0.5em auto;
+  margin: 1em auto;
   
 }
 .content kbd {
@@ -119,7 +119,7 @@ h1 {
   border: 1px solid white;
   display: inline-block;
   border-radius: 3px;
-  font-size: 0.9em;
+  font-size: 2em;
   vertical-align: text-top;
 }
 .content a {
