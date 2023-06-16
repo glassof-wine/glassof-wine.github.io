@@ -1,0 +1,853 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --font1: "Poppins";
+  --font2: "Playfair Display";
+  --dark: #221608;
+} 
+
+body {
+  margin: 0;
+  background-color: #f7f0ea;
+  font-family: var(--font1);
+  overflow-x: hidden;
+}
+
+.flex, .flex__col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex__col {
+  flex-direction: column;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main {
+  width: 100%;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: calc(100% - 80px);
+  justify-content: space-between;
+  margin: 40px 0;
+  transform: translatex(-50%);
+}
+
+a{
+  text-decoration: none;
+  object-position: center;
+  justify-content: center;
+  font-family: var(--font2);
+  font-size: 2vw;
+}
+
+.menu a {
+  font-size: 1vw;
+  font-weight: 600;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.menu ul {
+  gap: 20px 60px;
+}
+
+.intro {
+  position: relative;
+  width: calc(100% - 80px);
+  min-height: 100vh;
+  gap: 80px;
+}
+
+.intro h1 {
+  width: 50%;
+  font-weight: 700;
+  font-size: 6vw;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.intro img {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 50%;
+  width: 33%;
+  height: auto;
+  aspect-ratio: 9/14;
+  object-fit: cover;
+  opacity: 0.2;
+  transform: translateY(-50%);
+}
+
+.intro p {
+  width: 50%;
+  font-size: 2.6vw;
+}
+
+.intro p a {
+  color: #000;
+}
+
+.list__item {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 40px);
+  align-items: flex-end;
+  padding-bottom: 40px;
+}
+
+.list__item__title, .list__item__titleOutline {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  font-family: var(--font2);
+  font-size: 21vw;
+  font-weight: 700;
+  line-height: 80%;
+  color: var(--dark);
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.list__item__titleOutline {
+  z-index: 3;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--dark);
+}
+
+.list__item img {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 33%;
+  height: auto;
+  aspect-ratio: 9/14;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+ul.list__item__infos {
+  width: calc(100% - 80px);
+  
+}
+
+.list__item__infos li {
+  font-size: 3vw;
+   text-align: center;
+}
+
+.list__item__infos li span {
+  color: #818181;
+}
+
+.list__item__type, .list__item__project {
+  position: absolute;
+  top: 50%;
+  font-size: 1vw;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  transform: translateY(-50%);
+  color: #818181;
+}
+
+.list__item__type {
+  left: 36px;
+}
+
+.list__item__project {
+  right: 36px;
+}  
+
+@media (min-width: 1900px){
+  .list__item__title, .list__item__titleOutline {
+    font-size: 450px;
+  }
+
+  .list__item img, .intro__img {
+    width: auto;
+    height: 80%;
+  }
+}
